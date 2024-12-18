@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caelan's Basic Website</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <h1>Caelan's Sample Website</h1>
+    <p>This is a Sample website using various API's</p>
+    <button onclick="togglePokemon()">Pokemon Example</button>
+    <button onclick="toggleDestiny()">Destiny Example</button>
+    <button onclick="toggleDictionary()">Dictionary Example</button>
+    <div id = "pokemonExample" style = "display:none">
+        <hr>
+        <p>Enter a pokemon name and press submit to get an image of that pokemon</p>
+        <p>This example was taken from BroCode youtube channel and adapted to typescript</p>
+        <input type="text" id="pokemonName" placeholder="Enter Pokemon Name">
+        <button onclick="pokemonExample()">Submit</button>
+        <img src="" alt="pokemonImage" id="pokemonImage" style="display: none">
+        <script src="index.js"></script>
+    </div>
+    <div id = "destinyExample" style = "display:none">
+        <hr>
+        <p>Enter your Player name and all images of all your characters gear will appear</p>
+        <p>Examples include "Prank#7581" (Steam), "Praetor Quantum#5238" (Steam), "Nightstar#1557" (PSN)</p>
+        <p>This Example displays use of an API key</p>
+        <input type="text" id="accountName" placeholder="Enter Account Name">
+        <select id="accountType">
+            <option value="3">Steam</option>
+            <option value="2">PSN</option>
+            <option value="1">XBOX</option>
+            <option value="0">NONE</option>
+        </select>
+        <button onclick="DestinyExample()">Submit</button>
+        <br><br>
+        <img src="img.png" alt="loading" id="loading">
+        <Table id="LoadoutTable" style="display: none">
+            <tr>
+                <th id="Character1"></th>
+                <th id="Character2"></th>
+                <th id="Character3"></th>
+            </tr>
+            <tr>
+                <td><img src="" alt="Kinetic1" id="Kinetic1" style="display: block"></td>
+                <td><img src="" alt="Kinetic2" id="Kinetic2" style="display: block"></td>
+                <td><img src="" alt="Kinetic3" id="Kinetic3" style="display: block"></td>
+            </tr>
+            <tr>
+                <td><img src="" alt="Energy1" id="Energy1" style="display: block"></td>
+                <td><img src="" alt="Energy2" id="Energy2" style="display: block"></td>
+                <td><img src="" alt="Energy3" id="Energy3" style="display: block"></td>
+            </tr>
+            <tr>
+                <td><img src="" alt="Power1" id="Power1" style="display: block"></td>
+                <td><img src="" alt="Power2" id="Power2" style="display: block"></td>
+                <td><img src="" alt="Power3" id="Power3" style="display: block"></td>
+            </tr>
+            <tr>
+                <td><img src="" alt="Helm1" id="Helm1" style="display: block"></td>
+                <td><img src="" alt="Helm2" id="Helm2" style="display: block"></td>
+                <td><img src="" alt="Helm3" id="Helm3" style="display: block"></td>
+            </tr>
+            <tr>
+                <td><img src="" alt="Arms1" id="Arms1" style="display: block"></td>
+                <td><img src="" alt="Arms2" id="Arms2" style="display: block"></td>
+                <td><img src="" alt="Arms3" id="Arms3" style="display: block"></td>
+            </tr>
+            <tr>
+                <td><img src="" alt="Chest1" id="Chest1" style="display: block"></td>
+                <td><img src="" alt="Chest2" id="Chest2" style="display: block"></td>
+                <td><img src="" alt="Chest3" id="Chest3" style="display: block"></td>
+            </tr>
+            <tr>
+                <td><img src="" alt="Legs1" id="Legs1" style="display: block"></td>
+                <td><img src="" alt="Legs2" id="Legs2" style="display: block"></td>
+                <td><img src="" alt="Legs3" id="Legs3" style="display: block"></td>
+            </tr>
+            <tr>
+                <td><img src="" alt="Class1" id="Class1" style="display: block"></td>
+                <td><img src="" alt="Class2" id="Class2" style="display: block"></td>
+                <td><img src="" alt="Class3" id="Class3" style="display: block"></td>
+            </tr>
+        </Table>
+    </div>
+    <div id="dictionaryExample" style = "display:none">
+        <hr>
+        <p>Enter a word and the first definition will appear</p>
+        <p>This is displays use from a RESTful service</p>
+        <input type="text" id="wordInput" placeholder="Enter Word">
+        <button onclick="DictionaryExample()">Submit</button><br>
+        <label id="Definition"></label>
+    </div>
+</body>
+</html>
